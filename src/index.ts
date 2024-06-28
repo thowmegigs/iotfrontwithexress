@@ -3,7 +3,7 @@ import path from "path";
 import dotenv from 'dotenv';
 dotenv.config();
 const app = express();
-const publicPath = path.join(__dirname, './public');
+const publicPath = path.join(__dirname, '../public');
 app.use(express.static(publicPath));
 app.get("*", (req: Request, res: Response, next: NextFunction): void => {
     try {
